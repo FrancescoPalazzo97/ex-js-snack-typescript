@@ -83,3 +83,10 @@ let dipendente2: ProjectManager = {
 };
 
 console.log(dipendente, dipendente2);
+
+type Team = {
+  nome: string,
+  progettoAttuale: null | string,
+  budget: number,
+  membri: [ProjectManager, Developer, ...Developer[]]
+}
