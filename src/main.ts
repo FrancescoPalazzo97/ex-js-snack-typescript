@@ -32,14 +32,54 @@ type Dipendente = {
   contratto: 'indeterminato' | 'determinato' | 'freelance'
 };
 
-let dipendente: Dipendente = {
+// let dipendente: Dipendente = {
+//   nome: 'Francesco',
+//   cognome: 'Palazzo',
+//   annoNascita: 1997,
+//   sesso: 'm',
+//   anniDiServizio: [2023, 2024, 2025],
+//   emailAziendale: 'ciao@ciao.com',
+//   contratto: 'indeterminato'
+// };
+
+// console.log(dipendente);
+
+// Snack 3 + BONUS
+
+type Developer = Dipendente & {
+  livelloEsperienza: 'Junior' | 'Mid' | 'Senior',
+  linguaggi?: string[],
+  certificazioni: string[]
+};
+
+type ProjectManager = Dipendente & {
+  teamSize: null | number,
+  budgetGestito?: number,
+  stakeholderPrincipali: string[]
+}
+
+let dipendente: Developer = {
   nome: 'Francesco',
   cognome: 'Palazzo',
   annoNascita: 1997,
   sesso: 'm',
   anniDiServizio: [2023, 2024, 2025],
   emailAziendale: 'ciao@ciao.com',
-  contratto: 'indeterminato'
+  contratto: 'indeterminato',
+  livelloEsperienza: 'Junior',
+  certificazioni: []
 };
 
-console.log(dipendente);
+let dipendente2: ProjectManager = {
+  nome: 'Francesco',
+  cognome: 'Palazzo',
+  annoNascita: 1997,
+  sesso: 'm',
+  anniDiServizio: [2023, 2024, 2025],
+  emailAziendale: 'ciao@ciao.com',
+  contratto: 'indeterminato',
+  teamSize: 10,
+  stakeholderPrincipali: []
+};
+
+console.log(dipendente, dipendente2);
