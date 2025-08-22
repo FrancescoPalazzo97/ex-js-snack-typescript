@@ -27,13 +27,19 @@ type Dipendente = {
   cognome: string,
   annoNascita: number,
   sesso: 'm' | 'f',
-  anniDiServizio: number[]
-}
+  anniDiServizio: number[],
+  readonly emailAziendale: string,
+  contratto: 'indeterminato' | 'determinato' | 'freelance'
+};
 
-// let dipendente: Dipendente = {
-//   nome: 'Francesco',
-//   cognome: 'Palazzo',
-//   annoNascita: 1997,
-//   sesso: 'm',
-//   anniDiServizio: [2023, 2024, 2025]
-// }
+let dipendente: Dipendente = {
+  nome: 'Francesco',
+  cognome: 'Palazzo',
+  annoNascita: 1997,
+  sesso: 'm',
+  anniDiServizio: [2023, 2024, 2025],
+  emailAziendale: 'ciao@ciao.com',
+  contratto: 'indeterminato'
+};
+
+console.log(dipendente);
